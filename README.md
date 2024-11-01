@@ -22,7 +22,7 @@ This is an ongoing project, I will update the github when I can.
 
 ## <ins>Static (the images, etc.)</ins>
 
-Place the images you want to use on your pages in this folder. **Ensure the name of the images matches the name of the file you are calling on your .html page**
+Place the images you want to use on your pages in this folder. **Ensure the name of the image matches the name of the file you are calling on your .html page**
 
 # Getting started
 
