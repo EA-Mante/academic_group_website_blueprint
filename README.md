@@ -38,6 +38,6 @@ Next:
 * Locate the folder in your computer
 * Run using your preferred app (I use VS Code)
 * Go to the main.py file and run it
-* Wait for the line "Running on http://XXX.X.X.X:XXXX" to appear, and click the link to run locally, editing as you see fit
+* Wait for the line "Running on http://etc. " to appear, and click the link to run locally, editing as you see fit
 * Once the website is ready, launch it to a server to make it live
 * Enjoy!
