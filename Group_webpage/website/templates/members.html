@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Group - Group Members</title>
+    <style>
+        /* Basic reset and global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            margin: 0 0.5em;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: transparent; /* Normal background color */
+        }
+
+        /* Highlight effect when hovered */
+        nav a:hover {
+            background-color: #555; /* Highlight when hovered */
+            color: #fff;
+        }
+
+        /* Style for active links */
+        nav a.active {
+            background-color: #555; /* Keep background for active link */
+            color: #fff; /* Keep text color white */
+        }
+
+        /* Container for the main content */
+        .container {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 1em;
+        }
+
+        /* Uniform section styling for Post-Docs, PhD Students, and Master's Students */
+        .section {
+            text-align: center;
+            margin-bottom: 3em;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section h2:before,
+        .section h2:after {
+            content: '';
+            flex: 1;
+            border-bottom: 2px solid #333; /* Horizontal line */
+            margin: 0 1em;
+        }
+
+        .profile-group {
+            display: flex; /* Change from grid to flex */
+            justify-content: space-around; /* Spread items out */
+            gap: 2em;
+            flex-wrap: wrap; /* Allow wrapping to the next line */
+        }
+
+        .profile-item {
+            text-align: left; /* Align text to the left */
+            max-width: 300px; /* Increase width of profile items */
+            margin: 1em; /* Add margin for more space */
+        }
+
+        .profile-item img {
+            width: 250px; /* Uniform image size */
+            height: 250px; /* Ensures all images are square */
+            object-fit: cover; /* Crop image to fit within the box */
+            border-radius: 50%; /* Circular image */
+            margin-bottom: 1em;
+        }
+
+        .profile-item h3 {
+            font-size: 1.5em;
+            margin: 0.5em 0 0.3em;
+        }
+
+        .profile-item p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 0;
+        }
+
+        .profile-item .email {
+            font-size: 1em;
+            color: #777;
+            margin-top: 0.5em;
+        }
+
+        /* Former Students Section Styling */
+        .former-students {
+            text-align: center;
+            margin: 9em 0; /* Tripled margin for more space */
+        }
+
+        .former-students h3 {
+            font-size: 1.5em; /* Smaller header */
+            margin-bottom: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .former-students h3:before,
+        .former-students h3:after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #aaa; /* Thinner and lighter horizontal line */
+            margin: 0 1em;
+        }
+
+        .former-students .profile-item h3 {
+            font-size: 1.2em; /* Smaller name size */
+            margin: 0.5em 0; /* Adjusted margin */
+        }
+
+        .former-students .profile-item p {
+            font-size: 0.9em; /* Smaller role and current position size */
+            margin: 0.5em 0; /* Half a line of space */
+        }
+
+        /* Responsive layout for smaller screens */
+        @media (max-width: 768px) {
+            .profile-group {
+                flex-direction: column; /* Stack students on smaller screens */
+                align-items: center; /* Center align the items */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Include the header dynamically -->
+    {% include 'header.html' %}
+
+    <div class="container">
+
+        <!-- Post-Docs Section -->
+        <div class="section">
+            <h2>Post-Docs</h2>
+            <div class="profile-group">
+                <!-- Post-Doc 1 -->
+                <div class="profile-item">
+                    <img src="{{ url_for('static', filename='images/postdoc1.png') }}" alt="Post-Doc 1">
+                    <h3>Post-Doc 1</h3>
+                    <p>Brief description of Post-Doc 1's research and background.</p>
+                    <p class="email">Email: postdoc1@example.com</p>
+                </div>
+
+                <!-- Post-Doc 2 -->
+                <div class="profile-item">
+                    <img src="{{ url_for('static', filename='images/postdoc2.png') }}" alt="Post-Doc 2">
+                    <h3>Post-Doc 2</h3>
+                    <p>Brief description of Post-Doc 2's research and background.</p>
+                    <p class="email">Email: postdoc2@example.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PhD Students Section -->
+        <div class="section">
+            <h2>PhD Students</h2>
+            <div class="profile-group">
+                <!-- PhD 1 -->
+                <div class="profile-item">
+                    <img src="{{ url_for('static', filename='images/phd1.png') }}" alt="PhD Student 1">
+                    <h3>PhD Student 1</h3>
+                    <p>Brief description of PhD Student 1's research and background.</p>
+                    <p class="email">Email: phd1@example.com</p>
+                </div>
+
+                <!-- PhD 2 -->
+                <div class="profile-item">
+                    <img src="{{ url_for('static', filename='images/phd2.png') }}" alt="PhD Student 2">
+                    <h3>PhD Student 2</h3>
+                    <p>Brief description of PhD Student 2's research and background.</p>
+                    <p class="email">Email: phd2@example.com</p>
+                </div>
+
+                <!-- PhD 3 -->
+                <div class="profile-item">
+                    <img src="{{ url_for('static', filename='images/phd3.png') }}" alt="PhD Student 3">
+                    <h3>PhD Student 3</h3>
+                    <p>Brief description of PhD Student 3's research and background.</p>
+                    <p class="email">Email: phd3@example.com</p>
+                </div>
+
+                <!-- PhD 4 (formerly Post-Doc 3) -->
+                <div class="profile-item">
+                    <img src="{{ url_for('static', filename='images/phd4.png') }}" alt="PhD Student 4">
+                    <h3>PhD Student 4</h3>
+                    <p>Brief description of PhD Student 4's research and background.</p>
+                    <p class="email">Email: postdoc3@example.com</p> <!-- Adjust this if needed -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Master's Students Section -->
+        <div class="section">
+            <h2>Master's Students</h2>
+            <div class="profile-group">
+                <!-- Master's 1 -->
+                <div class="profile-item">
+                    <img src="{{ url_for('static', filename='images/masters1.png') }}" alt="Master's Student 1">
+                    <h3>Master's Student 1</h3>
+                    <p>Brief description of Master's Student 1's research and background.</p>
+                    <p class="email">Email: masters1@example.com</p>
+                </div>
+
+                <!-- Master's 2 -->
+                <div class="profile-item">
+                    <img src="{{ url_for('static', filename='images/masters2.png') }}" alt="Master's Student 2">
+                    <h3>Master's Student 2</h3>
+                    <p>Brief description of Master's Student 2's research and background.</p>
+                    <p class="email">Email: masters2@example.com</p>
+                </div>
+
+                <!-- Master's 3 -->
+                <div class="profile-item">
+                    <img src="{{ url_for('static', filename='images/masters3.png') }}" alt="Master's Student 3">
+                    <h3>Master's Student 3</h3>
+                    <p>Brief description of Master's Student 3's research and background.</p>
+                    <p class="email">Email: masters3@example.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Former Students Section -->
+        <div class="former-students">
+            <h3>Former Students</h3>
+            <div class="profile-group">
+                <!-- Former Student 1 -->
+                <div class="profile-item">
+                    <h3>Former Student 1</h3>
+                    <p>PhD (2020-2024)</p>
+                    <p><strong>Current Position:</strong> Post-Doc at Y University</p>
+                    <p><a href="https://www.linkedin.com" style="text-decoration: underline;">LinkedIn</a></p>
+                </div>
+
+                <!-- Former Student 2 -->
+                <div class="profile-item">
+                    <h3>Former Student 2</h3>
+                    <p>PhD (2019-2023)</p>
+                    <p><strong>Current Position:</strong> Lecturer at A University</p>
+                    <p class="email">Email: newemail@example.com</p>
+                </div>
+
+                <!-- Former Student 3 -->
+                <div class="profile-item">
+                    <h3>Former Student 3</h3>
+                    <p>Master's (2018-2020)</p>
+                    <p><strong>Current Position:</strong> Research Assistant at Z Institute</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

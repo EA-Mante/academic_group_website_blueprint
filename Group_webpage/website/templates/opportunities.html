@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities - X Group</title>
+    <style>
+        /* Basic reset and global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            margin: 0 0.5em;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: transparent; /* Normal background color */
+        }
+
+        /* Highlight effect when hovered */
+        nav a:hover {
+            background-color: #555; /* Highlight when hovered */
+            color: #fff;
+        }
+
+        /* Style for active links */
+        nav a.active {
+            background-color: #555; /* Keep background for active link */
+            color: #fff; /* Keep text color white */
+        }
+
+        /* Container for the main content */
+        .container {
+            max-width: 1100px;
+            margin: 2em auto;
+            padding: 0em;
+        }
+
+        /* Section styling */
+        .section {
+            text-align: left; /* Align text to the left for the section */
+            margin-bottom: 3em;
+        }
+
+        /* Paragraph styling */
+        p {
+            margin-bottom: 1em; /* Space between paragraphs */
+            line-height: 1.5; /* Adjust line height for readability */
+        }
+
+        /* Header for opportunities */
+        h2 {
+            font-size: 2.5em; /* Main title size */
+            margin-bottom: 0.5em; /* Margin below the title */
+        }
+
+        h3 {
+            font-size: 1.5em; /* Subheader size */
+            margin-top: 1.5em; /* Space above subheaders */
+            margin-bottom: 0.5em; /* Space below subheaders */
+        }
+
+        /* Remove the line below h3 */
+        h4 {
+            font-size: 1.2em; /* Size for the h4 header */
+            margin-top: 1em; /* Space above h4 */
+            margin-bottom: 0.5em; /* Space below h4 */
+        }
+
+        /* Responsive layout for smaller screens */
+        @media (max-width: 768px) {
+            h2 {
+                text-align: center; /* Center title on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Include the header -->
+    {% include 'header.html' %}
+
+    <div class="container">
+        <div class="section">
+            <h2>Opportunities</h2> <!-- Title for Opportunities page -->
+            <p>We are excited to announce various opportunities within our research group. We invite motivated individuals to apply for PhD and postdoctoral positions, as well as undergraduate research opportunities. Below are the details of the available positions and funding options.</p>
+
+            <h3>Postdoctoral Opportunities</h3>
+            <p>We invite applications for postdoctoral positions. Candidates are encouraged to seek external funding, with support available for crafting competitive proposals. Below are some potential funding sources:</p>
+            <p style="text-decoration: underline;">Available Scholarships for Postdoctoral Researchers:</p>
+            <ul>
+                <li>International Research Fellowship Program (Deadline in November 25th)</li>
+                <li>Innovative Solutions Grant (Deadline April 1st)</li>
+                <li>Interdisciplinary Research Fellowship</li>
+            </ul>
+
+            <h3>PhD Positions for 202X/202X</h3>
+            <p>We are seeking enthusiastic PhD candidates to explore innovative applications of artificial intelligence in chemistry. Interested applicants should submit their CV and a brief statement of research interests to the lead researcher. Please note that funding will primarily be available for candidates classified as “Home” students.</p>
+
+            <p style="text-decoration: underline;">Available Scholarships for PhD Students:</p>
+            <ul>
+                <li>National Scholarship Program</li>
+                <li>Global Chemistry Fellowship</li>
+                <li>University Merit Scholarship</li>
+            </ul>
+
+            <h3>Undergraduate Research Opportunities</h3>
+            <p>Our lab is open to hosting undergraduate students for research projects related to computational methods in chemistry. Interested students pursuing degrees in chemistry, physics, or related fields should contact us to explore available opportunities. Bursaries may be available through departmental initiatives.</p>
+        </div>
+    </div>
+
+</body>
+</html>

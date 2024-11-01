@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - X Group</title>
+    <style>
+        
+        /* Basic reset and global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            margin: 0 0.5em;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: transparent; /* Normal background color */
+        }
+
+        /* Highlight effect when hovered */
+        nav a:hover {
+            background-color: #555; /* Highlight when hovered */
+            color: #fff;
+        }
+
+        /* Style for active links */
+        nav a.active {
+            background-color: #555; /* Keep background for active link */
+            color: #fff; /* Keep text color white */
+        }
+
+        /* Container for the main content */
+        .container {
+            max-width: 1100px;
+            margin: 2em auto;
+            padding: 0em;
+        }
+
+        /* Section styling */
+        .section {
+            text-align: left;
+            margin-bottom: 3em;
+        }
+
+        /* Publication list styling */
+        .publications-list {
+            list-style-type: none;
+            padding-left: 0;
+            counter-reset: publication-counter 0; /* Reset the counter starting from 0 */
+        }
+
+        .publications-list li {
+            margin-bottom: 1.5em;
+            line-height: 1.6;
+            counter-increment: publication-counter; /* Increment the counter */
+        }
+
+        .publications-list li::before {
+            content: counter(publication-counter, decimal) ". "; /* Display the counter with period and space */
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .publication-authors {
+            font-weight: bold;
+        }
+
+        .publication-title {
+            font-style: normal;
+        }
+
+        .publication-journal {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with navigation -->
+    <!-- Include the header from the separate header.html file -->
+    {% include 'header.html' %}
+
+    <!-- Main content section -->
+    <div class="container">
+        <div class="section">
+            <h2>Publications</h2>
+            <p>Here is a list of recent publications from the X Computational Chemistry Group. These papers showcase our work in various fields of computational chemistry, molecular modeling, and theoretical chemistry.</p>
+
+            <!-- Custom numbered list for publications, most recent at the top -->
+            <ul class="publications-list">
+                <p>
+                    <span class="publication-number">4.</span> 
+                    <span class="publication-authors">J. Doe, A. Smith, P. Brown</span>. 
+                    <span class="publication-title">Computational Approaches to Chemical Reaction Networks</span>. 
+                    <span class="publication-journal">J. Comput. Chem., 2023</span>.
+                </p>
+                <p>
+                    <span class="publication-number">3.</span> 
+                    <span class="publication-authors">S. Johnson, K. Lee, D. Chen</span>. 
+                    <span class="publication-title">Modeling Enzyme Catalysis using Quantum Mechanics</span>. 
+                    <span class="publication-journal">Theor. Chem. Acc., 2022</span>.
+                </p>
+                <p>
+                    <span class="publication-number">2.</span> 
+                    <span class="publication-authors">M. Davis, L. Nguyen</span>. 
+                    <span class="publication-title">Molecular Dynamics Simulations of Protein Folding</span>. 
+                    <span class="publication-journal">Comput. Biol. J., 2021</span>.
+                </p>
+                <p>
+                    <span class="publication-number">1.</span> 
+                    <span class="publication-authors">A. Smith, T. Zhang, R. Garcia</span>. 
+                    <span class="publication-title">Artificial Intelligence in Drug Design: New Methods and Applications</span>. 
+                    <span class="publication-journal">J. Med. Chem., 2020</span>.
+                </p>
+            </ul>
+        </div>
+    </div>
+
+
+<style>
+    /* Styling for publications section */
+    .publications-list {
+        list-style: none;
+        padding: 0;
+        counter-reset: publication-counter; /* Initialize the counter */
+    }
+
+    .publications-list li {
+        font-size: 1.1em;
+        margin-bottom: 1em;
+        display: flex;
+        align-items: baseline;
+    }
+
+    .publication-number {
+        font-weight: bold;
+        color: #333;
+        margin-right: 0.5em;
+    }
+</style>
+
+</body>
+</html>

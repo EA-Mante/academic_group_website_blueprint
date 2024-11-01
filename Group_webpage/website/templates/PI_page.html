@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Group - Professor X</title>
+    <style>
+        /* Basic reset and global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            margin: 0 0.5em;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: transparent;
+        }
+
+        /* Highlight effect when hovered */
+        nav a:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        /* Style for active links */
+        nav a.active {
+            background-color: #555;
+            color: #fff;
+        }
+
+        /* Grey Box Bubble Section */
+        .grey-box {
+            background-color: #ddd;
+            border-radius: 10px;
+            max-width: 1100px;
+            margin: 2em auto;
+            padding: 2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .grey-box .text-content {
+            max-width: 1100px;
+            margin: 0 auto; /* 1em; commenting out this part removes the bottom margin 
+                               in the PI's profile*/
+        }
+
+        .grey-box h2 {
+            margin-top: 0;
+            font-size: 2em;
+        }
+
+        /* Adjusted font size for biography paragraphs */
+        .grey-box p {
+            font-size: 0.9em; /* Adjust font size as needed */
+            margin: 0.5em 0 1em;
+            line-height: 1.5;
+        }
+
+        .content {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .content img {
+            width: 450px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Awards section styling */
+        .awards {
+            margin: 2em auto;
+            max-width: 1100px;
+            padding: 1em;
+            text-align: left;
+        }
+
+        .awards h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .awards ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .awards li {
+            margin-bottom: 20px;
+        }
+
+        .awards li ul {
+            list-style-type: disc;
+            padding-left: 48px;
+            margin-bottom: 5px;
+        }
+
+        .awards li ul li {
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        /* Contact info styles */
+        .contact-info {
+            margin-top: 1em;
+        }
+
+        .contact-info li {
+            list-style: none;
+        }
+
+        /* Responsive layout for smaller screens */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content img {
+                margin: 0 auto;
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Include the header -->
+    {% include 'header.html' %}
+
+    <div class="grey-box">
+        <div class="text-content">
+            <div class="content">
+                <img src="{{ url_for('static', filename='images/professor1.png') }}" alt="Professor X">
+                <div>
+                    <h2>Professor X</h2>
+                    <p>Professor X was born in Springfield, USA. They completed their undergraduate studies at the University of Springfield (2005) and graduated with their PhD (2010) focusing on developing computational models to study reaction mechanisms in organic chemistry.</p>
+
+                    <p>After graduating, they joined the Department of Chemical Engineering at Springfield University (2010), where they conducted research in catalysis and molecular modeling. In 2016, they moved to the University of Research Excellence with a National Science Foundation Fellowship, specializing in computational drug design. They later became an Associate Professor in the Department of Chemistry at Prestigious University (2018).</p>
+
+                    <p>Throughout their career, Professor X has received numerous accolades, including the American Chemical Society (ACS) Outstanding Young Investigator Award (2017), the National Academy of Sciences Research Award (2019), and the Excellence in Teaching Award at Prestigious University (2021). Their research group focuses on the development of new computational techniques to understand complex chemical processes and guide molecular design.</p>
+
+                    <ul class="contact-info">
+                        <li>Email: <a href="mailto:professorabc@example.com">professorabc@example.com</a></li>
+                        <li>Website: <a href="https://www.professorX.com" target="_blank">Professor X's Website</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> <!-- Grey box ends here -->
+
+    <!-- Awards Section -->
+    <div class="awards">
+        <h3>Awards, Honours, and Prizes</h3>
+        <ul>
+            <li><strong>2024</strong>
+                <ul>
+                    <li>Prestigious Scientific Contribution Award - Society for Advanced Chemistry</li>
+                    <li>Innovative Research Award - Global Science Initiative</li>
+                </ul>
+            </li>
+            <li><strong>2023</strong>
+                <ul>
+                    <li>Excellence in Research Award - International Research Foundation</li>
+                    <li>Best Paper Award - Journal of Advanced Chemistry</li>
+                </ul>
+            </li>
+            <li><strong>2022</strong>
+                <ul>
+                    <li>Distinguished Educator Award - Global Education Association</li>
+                </ul>
+            </li>
+            <li><strong>2021</strong>
+                <ul>
+                    <li>Innovation in Chemistry Award - American Chemical Society</li>
+                    <li>Research Excellence Award - National Academy of Sciences</li>
+                </ul>
+            </li>
+            <li><strong>2020</strong>
+                <ul>
+                    <li>Outstanding Young Investigator Award - Chemical Research Society</li>
+                </ul>
+            </li>
+            <li><strong>2019</strong>
+                <ul>
+                    <li>Leadership in Science Award - Association of Chemistry Professionals</li>
+                </ul>
+            </li>
+            <li><strong>2018</strong>
+                <ul>
+                    <li>Rising Star Award - International Academy of Sciences</li>
+                </ul>
+            </li>
+            <li><strong>2017</strong>
+                <ul>
+                    <li>National Science Foundation Fellowship - National Science Foundation</li>
+                </ul>
+            </li>
+        </ul>
+    </div> <!-- Awards section ends here -->
+
+</body>
+</html>

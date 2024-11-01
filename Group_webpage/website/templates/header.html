@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjustable Page Buttons</title>
+    <style>
+        /* Style for the header */
+        header {
+            display: flex;
+            align-items: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        /* Style for the logo */
+        header img {
+            height: 90px;
+            margin-right: 20px;
+        }
+        
+        /* Centered header title */
+        header h1 {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0;
+        }
+        
+        /* Nav styling */
+        nav {
+            margin-left: auto;
+            margin-top: 20px;
+        }
+
+        /* Adjustable button class */
+        .nav-button {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.25em 0.5em; /* Adjust padding to make buttons larger or smaller */
+            font-size: 0.8em; /* Adjust font size to increase button size */
+            border: 1px solid #fff;
+            border-radius: 5px;
+            margin: 0 0.5em;
+            background-color: transparent;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        /* Hover and active styles */
+        .nav-button:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .nav-button.active {
+            background-color: #555;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="static/images/logo_v01.png" alt="Logo">
+    <h1>X Computational Chemistry Group</h1>
+    <nav>
+        <a href="{{ url_for('views.home') }}" class="nav-button {{ 'active' if current_page == 'home' else '' }}">Home</a>
+        <a href="{{ url_for('views.pi_page') }}" class="nav-button {{ 'active' if current_page == 'pi_page' else '' }}">Professor X</a>
+        <a href="{{ url_for('views.members') }}" class="nav-button {{ 'active' if current_page == 'members' else '' }}">Group Members</a>
+        <a href="{{ url_for('views.opportunities') }}" class="nav-button {{ 'active' if current_page == 'opportunities' else '' }}">Opportunities</a>
+        <a href="{{ url_for('views.publications') }}" class="nav-button {{ 'active' if current_page == 'publications' else '' }}">Publications</a>
+    </nav>
+</header>
+
+</body>
+</html>

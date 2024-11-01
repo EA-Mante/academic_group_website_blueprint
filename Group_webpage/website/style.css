@@ -1,0 +1,154 @@
+/* Basic reset and global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+nav {
+    text-align: center;
+    margin-bottom: 1em;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5em 1em;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 0 0.5em;
+}
+nav a.active {
+    background-color: #333;
+    color: #fff;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1em;
+}
+.section {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.section h2 {
+    margin-top: 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.section h2:hover {
+    background-color: #ddd;
+}
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+}
+.content.open {
+    max-height: 500px; /* Adjust this value based on your content's expected height */
+    opacity: 1;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.profile-box {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+.profile-box img {
+    width: 80px;
+    height: 80px;
+}
+.profile-box:hover {
+    background-color: #f0f0f0;
+}
+.profile-content {
+    padding: 0.5em;
+    display: none;
+}
+.profile-box.open .profile-content {
+    display: block;
+}
+.profile-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.profile-item {
+    width: calc(25% - 1em);
+    box-sizing: border-box;
+}
+.profile-item img {
+    width: 100%;
+    height: auto;
+}
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+.contact-info li {
+    margin-bottom: 0.5em;
+}
+
+/* Home Page Specific Styles */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+}
+.hero p {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    border-radius: 10px;
+}
+.main-content {
+    padding: 2em 1em;
+    text-align: center;
+}
+.main-content a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5em 1em;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 0.5em;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+.main-content a:hover {
+    background-color: #333;
+    color: #fff;
+}

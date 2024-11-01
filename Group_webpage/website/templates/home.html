@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X - Computational Chemistry Group</title>
+    <style>
+        /* Basic reset and global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            margin: 0 0.5em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a.active {
+            background-color: #555;
+        }
+        nav a:hover {
+            background-color: #555;
+            color: #fff;
+        }
+
+        /* Grey Box Bubble Section */
+        .grey-box {
+            background-color: #ddd;
+            border-radius: 10px;
+            max-width: 1100px;
+            margin: 2em auto;
+            padding: 2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center-align content */
+        }
+        .grey-box .text-content {
+            max-width: 1100px;
+            margin: 0 auto 1em; /* Space below text */
+        }
+        .grey-box h2 {
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .grey-box p {
+            font-size: 1.2em;
+            margin: 0.5em 0 1em;
+        }
+        .grey-box img.large-photo {
+            width: 100%; /* Full width of container */
+            max-width: 1100px; /* Max width for large screens */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px;
+            margin: 0.5em 0 0em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2em 1em;
+            text-align: center;
+        }
+        .main-content a {
+            text-decoration: none;
+            color: #333;
+            padding: 0.5em 1em;
+            border: 1px solid #333;
+            border-radius: 5px;
+            margin: 0.5em;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .main-content a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Include the header from the separate header.html file -->
+    {% include 'header.html' %}
+
+    <div class="grey-box">
+        <div class="text-content">
+            <h2 style="text-align: center;">Welcome to the X Group!</h2>
+            <p style="font-size: 1.0em; text-align: left; margin-bottom: 40px;">We are an inclusive and collaborative research group focused on the intersections
+            of computational chemistry, physical chemistry, and chemical physics. Our work
+            encompasses a wide range of applications, from fundamental studies to the discovery
+            of new molecules and forces. We emphasize continuous learning from one another
+            and our environment to advance both our knowledge and the field. We are also
+            committed to fostering the well-being of our members while pursuing excellence in
+            research. Additionally, we enjoy lighthearted interactions, embracing humor in our
+            communications as we navigate the challenges of scientific inquiry.
+            </p>
+        </div>
+        <img src="static/images/group_photo_v03.png" alt="Group Photo" class="large-photo">
+    </div>        
+
+</body>
+</html>
