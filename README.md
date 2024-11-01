@@ -26,7 +26,7 @@ Place the images you want to use on your pages in this folder. **Ensure the name
 
 # Getting started
 
-To get started, open trun the following command in your preferred terminal:
+To get started, open run the following command in your preferred terminal:
 
 ```console
 foo@bar:~$ git clone https://github.com/EA-Mante/academic_group_website_blueprint
