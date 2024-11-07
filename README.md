@@ -12,7 +12,7 @@ This is an ongoing project, I will update the github when I can.
 
 **_"home.html"_** is the home page, the first page visitors will see. A brief description of the group can be given here, as well as a group photo
 
-**_"PI_page.html"_** is where the PI of the group can be introduced. I have given a generic description of a computation chemist, users can insert their own bio as well as edit the awards section at the bottom of the page
+**_"PI_page.html"_** is where the PI of the group can be introduced. I have given a generic description of a computational chemist, users can insert their own bio as well as edit the awards section at the bottom of the page
 
 **_"members.html"_** shows the group members, at this stage simply copy and paste the relevant lines of html to add another member to a section (or another section, e.g. if your group has BSc students). **You can add linkedin or other hyperlinks, as shown in the "Former student 1" section**
 
